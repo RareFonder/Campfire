@@ -2,6 +2,9 @@ button {
   background: none;
   border: 1px solid black;
   padding: 7px 15px;
+  position: absolute;
+  top: 200px;
+  left: 30%;
 }
 
 button:before {
@@ -20,4 +23,10 @@ button:hover:before {
 
 button:hover {
   text-decoration: underline;
+}
+
+#campfire {
+  position: absolute;
+  top: 50px;
+  left: 50%;
 }
