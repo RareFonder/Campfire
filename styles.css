@@ -3,3 +3,21 @@ button {
   border: 1px solid black;
   padding: 7px 15px;
 }
+
+button:before {
+  content: attr(data-hover);
+  visibility: hidden;
+  background: white;
+  border: 1px solid black;
+  padding: 4px 7px;
+  position: absolute;
+  margin: 23px 0px 10px 30px;
+}
+
+button:hover:before {
+  visibility: visible;
+}
+
+button:hover {
+  text-decoration: underline;
+}
