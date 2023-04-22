@@ -26,6 +26,13 @@ button:hover {
 }
 
 #campfire {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+}
+
+#stones {
   position: absolute;
   top: 50px;
   left: 50%;
