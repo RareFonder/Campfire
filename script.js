@@ -1,6 +1,8 @@
 window.addEventListener('load', () => {
   const lightBtn = document.getElementById('light-btn');
+  const harvestWoodBtn = document.getElementById('harvest-wood');
   const actions = document.getElementById('action-log');
+  const inventory = document.getElementById('inventory');
   const campfireSoundEffect = new Audio('https://stackblitz.com/files/web-platform-yoksb7/github/RareFonder/Campfire/main/lit-fireplace-6307.mp3');
   campfireSoundEffect.loop = true;
 
@@ -43,8 +45,16 @@ window.addEventListener('load', () => {
 
     addAction('You light the campfire. Your surroundings brighten and the chill in the air is gone.', '', '', 1500);
     addAction('You spot a nearby FOREST.', 'FOREST', '#318748', 5000);
-    addAction('You ought to collect some WOOD.', 'WOOD', '#7d3b09', 7000)
+    addAction('You ought to collect some WOOD.', 'WOOD', '#7d3b09', 7000);
+
+    setTimeout(() => {
+      harvestWoodBtn.style.visibility = 'visible';
+    }, 8000);
 
     clicked = true;
   });
+
+  harvestWoodBtn.addEventListener('click', () => {
+    inventory.style.visibility = 'visible';
+  })
 });  

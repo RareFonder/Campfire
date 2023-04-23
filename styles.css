@@ -15,8 +15,21 @@ body {
   cursor: pointer;
 }
 
-#light-btn:hover {
+button:hover {
   text-decoration: underline;
+}
+
+#harvest-wood {
+  visibility: hidden;
+  position: absolute;
+  top: 320px;
+  right: calc(50% - 65px);
+  width: 130px;
+  height: 30px;
+  border: 1px solid #000000;
+  background-color: transparent;
+  color: #000000;
+  cursor: pointer;
 }
 
 #stones, #campfire {
@@ -41,6 +54,12 @@ body {
   width: 50%;
   height: 250px;
 }
+
+#inventory {
+  visibility: hidden;
+  position: absolute;
+}
+
 
 @keyframes move-up {
   from {

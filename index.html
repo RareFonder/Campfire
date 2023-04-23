@@ -4,19 +4,27 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JavaScript Game</title>
+  <title>Campfire</title>
+  <link rel="shortcut icon" type="image/x-icon" href="https://stackblitz.com/files/web-platform-yoksb7/github/RareFonder/Campfire/main/pixil-frame-0 (2).png"/>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <img id="stones" src="https://stackblitz.com/files/web-platform-yoksb7/github/RareFonder/Campfire/main/pixil-frame-0 (3).png">
   <img id="campfire" src="https://stackblitz.com/files/web-platform-yoksb7/github/RareFonder/Campfire/main/pixil-frame-0 (2).png">
 
-  <button id="light-btn">Light Campfire</button>
+  <div id="buttons">
+    <button id="light-btn">Light Campfire</button>
+    <button id="harvest-wood">Harvest Wood</button>
+  </div>
 
   <fieldset id="action-log">
     <legend>Actions</legend>
   </fieldset>
-  
+
+  <fieldset id="inventory">
+    <legend>Inventory</legend>
+  </fieldset>
+
   <script type="module" src="script.js"></script>
 </body>
 </html>
