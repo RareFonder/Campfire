@@ -1,30 +1,50 @@
-window.onload = () => {
+window.addEventListener('load', () => {
   const lightBtn = document.getElementById('light-btn');
   const actions = document.getElementById('action-log');
-  const campfireNoice = new Audio();
-  campfireNoice.src = 'https://stackblitz.com/files/web-platform-yoksb7/github/RareFonder/Campfire/main/lit-fireplace-6307.mp3';
+  const campfireSoundEffect = new Audio('https://stackblitz.com/files/web-platform-yoksb7/github/RareFonder/Campfire/main/lit-fireplace-6307.mp3');
+  campfireSoundEffect.loop = true;
+
+  const addAction = (text, specialWord, specialWordColor, delay) => {
+    setTimeout(() => {
+      const p = document.createElement('p');
+      p.textContent = text;
+      if (text.includes(specialWord)) {
+        const span = document.createElement('span');
+        span.textContent = specialWord;
+        span.style.color = specialWordColor;
+        span.style.fontWeight = 'bold';
+        span.style.fontSize = '18px';
+        p.innerHTML = text.replace(specialWord, span.outerHTML);
+      }
+      p.style.animation = 'move-up 1s forwards';
+      actions.appendChild(p);
+    }, delay);
+  };
+
+  let clicked = false;
 
   lightBtn.addEventListener('click', () => {
+    if (!clicked) {
+      lightBtn.style.borderColor = '#808080';
+      lightBtn.style.color = '#808080';
+      lightBtn.style.pointerEvents = 'none'; 
+      clicked = true;
+    }
+    
     stones.style.visibility = 'hidden';
     campfire.style.visibility = 'visible';
-    document.body.style.background = 'white';
-    lightBtn.style.color = 'black';
-    lightBtn.style.borderColor = 'black';
-    campfireNoice.play();
+    actions.style.visibility = 'visible';
 
-    setTimeout(() => {
-      const text = document.createElement('p');
-      text.textContent = 'You light the campfire. Your surroundings brighten and the chill in the air is gone.';
-      actions.appendChild(text);
-      setTimeout(() => {
-        text.classList.add('action-add');
-      }, 50);
-      setTimeout(() => {
-        const text2 = document.createElement('p');
-        text2.textContent = 'You spot a nearby forest. You ought to collect some wood.'
-        actions.appendChild(text2);
-        text.classList.add('action-add');
-      }, 4000);
-    }, 1500);
+    document.body.style.transition = 'background-color 1s';
+    document.body.style.backgroundColor = '#ffffff';
+    document.body.style.color = '#000000';
+
+    campfireSoundEffect.play();
+
+    addAction('You light the campfire. Your surroundings brighten and the chill in the air is gone.', '', '', 1500);
+    addAction('You spot a nearby FOREST.', 'FOREST', '#318748', 5000);
+    addAction('You ought to collect some WOOD.', 'WOOD', '#7d3b09', 7000)
+
+    clicked = true;
   });
-};  
+});  
