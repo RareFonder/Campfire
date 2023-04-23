@@ -24,7 +24,7 @@ window.onload = () => {
         text2.textContent = 'You spot a nearby forest. You ought to collect some wood.'
         actions.appendChild(text2);
         text.classList.add('action-add');
-      }, 5000);
-    }, 2000);
+      }, 4000);
+    }, 1500);
   });
 };  
