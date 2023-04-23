@@ -48,22 +48,27 @@ button:hover {
   visibility: hidden;
   position: absolute;
   border: 1px solid #000000;
-  top: 400px;
+  top: 410px;
   left: 50%;
   transform: translateX(-50%);
   width: 50%;
-  height: 250px;
+  height: 240px;
 }
 
 #inventory {
   visibility: hidden;
   position: absolute;
+  border: 1px solid black;
+  top: 50px;
+  right: 24%;
+  width: 200px;
+  height: 330px;
 }
 
 
 @keyframes move-up {
   from {
-    transform: translateY(50px);
+    transform: translateY(25px);
     opacity: 0; 
   }
   to {

@@ -54,7 +54,12 @@ window.addEventListener('load', () => {
     clicked = true;
   });
 
+  let playerWood = 0;
+
   harvestWoodBtn.addEventListener('click', () => {
     inventory.style.visibility = 'visible';
+    playerWood += 10;
+    addAction('You haverested 10 wood.', '', '', 0);
+    wood.innerHTML = `    Wood          ${playerWood}`;
   })
 });  
