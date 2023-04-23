@@ -2,56 +2,50 @@ body {
   background: black;
 }
 
-button {
+#light-btn {
   background: none;
+  position: absolute;
   color: white;
   border: 1px solid white;
   width: 130px;
   height: 30px;
-  position: absolute;
-  top: 200px;
-  right: 60%;
+  top: 270px;
+  right: 55%;
 }
 
-button::before {
-  content: attr(datahover);
-  visibility: hidden;
-  display: flex;
-  width: 128px;
-  height: 25px;
-  border: 1px solid white;
-  position: absolute;
-  z-index: -1;
-  top: 28px;
-  right: -1px;
-  align-items: center;
-  justify-content: center;
-}
-
-button:hover::before {
-  visibility: visible;
-}
-
-button:hover {
+#light-btn:hover {
   text-decoration: underline;
-}
-
-#actions {
-  position: absolute;
-  left: 15%;
-  width: 250px;
-  height: 670px;
 }
 
 #stones {
   position: absolute;
-  top: 50px;
-  right: 60%;
+  top: 100px;
+  right: 55%;
 }
 
 #campfire {
   visibility: hidden;
   position: absolute;
-  top: 50px;
-  right: 60%;
+  top: 100px;
+  right: 55%;
+}
+
+#action-log {
+  position: absolute;
+  border: 1px solid black;
+  top: 400px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 250px;
+}
+
+@keyframes add {
+  from {top: 90%;}
+  to {top: 0%;}
+}
+
+.action-add {
+  animation-name: add;
+  animation-duration: 1s;
 }
