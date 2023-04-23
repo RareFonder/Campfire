@@ -61,5 +61,7 @@ window.addEventListener('load', () => {
     playerWood += 10;
     addAction('You haverested 10 wood.', '', '', 0);
     wood.innerHTML = `    Wood          ${playerWood}`;
+    addAction('You feel tired.', '', '', 2000);
+    addAction('You decided to head to SLEEP.', 'SLEEP', '#4287f5', 5000);
   })
 });  
