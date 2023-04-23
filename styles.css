@@ -5,16 +5,18 @@ button {
   height: 30px;
   position: absolute;
   top: 200px;
-  left: 30%;
+  left: 40%;
 }
 
 button:before {
   content: attr(data-hover);
   visibility: hidden;
   border: 1px solid black;
-  width: 130px;
-  height: 30px;
+  width: 128px;
+  height: 25px;
   position: absolute;
+  top: 28px;
+  right: -1px;
 }
 
 button:hover:before {
@@ -25,15 +27,23 @@ button:hover {
   text-decoration: underline;
 }
 
-#campfire {
-  visibility: hidden;
+#actions {
   position: absolute;
-  top: 50px;
-  left: 50%;
+  left: 15%;
+  width: 250px;
+  height: 670px;
+  border: 1px solid black;
 }
 
 #stones {
   position: absolute;
   top: 50px;
-  left: 50%;
+  left: 40%;
+}
+
+#campfire {
+  visibility: hidden;
+  position: absolute;
+  top: 50px;
+  left: 40%;
 }
