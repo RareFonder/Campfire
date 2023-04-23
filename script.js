@@ -1,9 +1,8 @@
 window.onload = () => {
   const lightBtn = document.getElementById('light-btn');
   const actions = document.getElementById('action-log');
-  const RoomMusic = new Audio();
-  RoomMusic.src = 'https://stackblitz.com/files/web-platform-yoksb7/github/RareFonder/Campfire/main/Dream (Ambience).mp3';
-  RoomMusic.play();
+  const campfireNoice = new Audio();
+  campfireNoice.src = 'https://stackblitz.com/files/web-platform-yoksb7/github/RareFonder/Campfire/main/lit-fireplace-6307.mp3';
 
   lightBtn.addEventListener('click', () => {
     stones.style.visibility = 'hidden';
@@ -11,6 +10,7 @@ window.onload = () => {
     document.body.style.background = 'white';
     lightBtn.style.color = 'black';
     lightBtn.style.borderColor = 'black';
+    campfireNoice.play();
 
     setTimeout(() => {
       const text = document.createElement('p');
