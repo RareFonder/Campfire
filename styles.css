@@ -1,6 +1,11 @@
+body{
+  background: black;
+}
+
 button {
   background: none;
-  border: 1px solid black;
+  color: white;
+  border: 1px solid white;
   width: 130px;
   height: 30px;
   position: absolute;
@@ -14,7 +19,7 @@ button:before {
   display: flex;
   width: 128px;
   height: 25px;
-  border: 1px solid black;
+  border: 1px solid white;
   position: absolute;
   top: 28px;
   right: -1px;
